@@ -13,7 +13,7 @@ namespace BharatMedics.Repository.Doctor
             _context = context;
         }
 
-        public string Doctor(Doctor doctor)
+        public string DoctorRegister(Models.Doctor doctor)
         {
             try
             {
@@ -32,7 +32,5 @@ namespace BharatMedics.Repository.Doctor
                 return "Not able to Add the Doctor Retry";
             }
         }
-
-       
     }
 }

@@ -17,7 +17,7 @@ namespace BharatMedics.Controllers
         private readonly IConfiguration _configuration;
         private readonly IAdminLogin adminLogin;
         private readonly IDoctorLogin doctorLogin;
-        public LoginController(IConfiguration configuration, IAdminLogin adminLogin)
+        public LoginController(IConfiguration configuration, IAdminLogin adminLogin, IDoctorLogin doctorLogin)
         {
             _configuration = configuration;
             this.adminLogin = adminLogin;

@@ -4,7 +4,7 @@ namespace BharatMedics.Repository.Doctor
 {
     public interface IDoctorLogin
     {
-        DoctorReg Login(string username, string password);
+        Models.Doctor Login(string username, string password);
       
     }
 }

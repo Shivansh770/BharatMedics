@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace BharatMedics.Models
 {
     public class Drug
+
     {
 
         [Key]

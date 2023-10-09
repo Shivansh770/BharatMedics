@@ -10,9 +10,9 @@ namespace BharatMedics.Repository.Doctor
             this._context = context;
         }
 
-        public Doctor Login(string email, string password)
+        public Models.Doctor Login(string email, string pwd)
         {
-            return _context.Doctors.Where(l => l.Email.Equals(email) && l.Password.Equals(password)).FirstOrDefault();
+            return _context.Doctors.FirstOrDefault(l => l.Email.Equals(email) && l.Password.Equals(pwd));
         }
     }
 }

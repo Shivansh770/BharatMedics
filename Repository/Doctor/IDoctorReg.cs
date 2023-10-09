@@ -3,6 +3,6 @@ namespace BharatMedics.Repository.Doctor
 {
     public interface IDoctorReg
     {
-        string DoctorReg(DoctorReg doctor);
+        string DoctorRegister(BharatMedics.Models.Doctor doctor);
     }
 }
