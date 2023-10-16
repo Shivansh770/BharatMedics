@@ -1,0 +1,59 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Poppins&display=swap');
+
+form {
+  background-color: rgba(236, 206, 206, 0.9);
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(233, 9, 9, 0.2);
+  width: 350px;
+  margin: auto;
+}
+
+button {
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  background-image: linear-gradient(45deg, #db344a, #bec7c7);
+  width: 172px;
+  height: 35px;
+  margin-top: 10px;
+  border-radius: 4px;
+  transition: 0.7s ease;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+} */
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #90effc;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #95dd36, #5045b4);
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
+  background-color: #1B9C85;
+
+  }
+
+  @media (min-width: 768px) {
+  .gradient-form {
+  height: 100vh !important;
+  }
+  }
+  @media (min-width: 769px) {
+  .gradient-custom-2 {
+  border-top-right-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  }
+  }
+ .sia {
+
+  height: max-content;
+
+  }

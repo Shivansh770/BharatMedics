@@ -1,0 +1,131 @@
+<!-- 
+<P class="text-center fs-3" [ngClass]="isAccountCreated ? 'text-success pb-1' : 'text-danger pb-1'">
+    {{displayMsg}}
+</P>
+
+<form [formGroup]="registerForm" (ngSubmit)="registerSubmitted()" class="border p-5 rounded-4">
+    <div class="row g-0">
+        <div class="col text-center p-2 mb-3 bg-light">
+            <span class="fs-3">Register</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+            <label for="Name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="Name" formControlName="Name">
+            <div class="form-text text-danger" *ngIf="Name.errors?.['required'] && (Name.touched || Name.dirty)">
+                Name is Required.</div>
+                <div class="form-text text-danger" *ngIf="Name.errors?.['pattern'] && (Name.touched || Name.dirty)">
+                    Name should start with Alphabet.</div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email">
+                <div class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
+                    Email is Required.</div>
+                    <div class="form-text text-danger" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">
+                        Email is Invalid.</div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" formControlName="password">
+                <div class="form-text text-danger" *ngIf="Password.errors?.['required'] && (Password.touched || Password.dirty)">
+                    Password is Required.</div>
+                    <div class="form-text text-danger" *ngIf="Password.errors?.['minlength'] || Password.errors?.['maxlength'] 
+                    && (Password.touched || Password.dirty)">
+                        Password should be at least 6 and at max 15 character long.</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="d-grid">
+                    <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mt-3">
+                <span class="me-2">Already have Account</span><a routerLink="/login">Login</a>
+            </div>
+        </div>
+</form> -->
+
+
+<section class="h-100 gradient-form sia" style="background-color: #F8F1F1;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">Lorem ipsum dolor sit amet consectetur</h4>
+                <p class="small mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis saepe vero perspiciatis nesciunt doloribus ratione rerum possimus officiis eos similique cumque in iste temporibus eligendi, iusto quae assumenda laboriosam sunt!</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+
+                <div class="text-center">
+                  <img src="./assets/logo.png"
+                    style="width: 185px;" alt="logo">
+                  <h4 class="mt-1 mb-5 pb-1">powerful brand quote</h4>
+                </div>
+                
+                <form [formGroup]="registerForm">
+                  <p>Please Fill the details</p>
+
+                  <div class="form-outline  mb-4">
+                    <small *ngIf="registerForm.controls['username'].dirty  && registerForm.hasError('required','username')" class="text-danger">*Username is required</small>
+                    <input formControlName="username" type="email" id="form2Example11" class="form-control border border-success"
+                      placeholder="Username" />
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input placeholder="Password" formControlName="password" type="password" id="form2Example22" class="form-control border border-success" />
+                  
+                    <small *ngIf="registerForm.controls['password'].dirty  && registerForm.hasError('required','password')" class="text-danger">*Password is required</small>
+
+                  </div>
+
+                  <div class="form-outline  mb-4">
+      <small *ngIf="registerForm.controls['name'].dirty  && registerForm.hasError('required','name')" class="text-danger">*Name is required</small>
+
+                   
+                    <input formControlName="name" type="text" id="form2Example11" class="form-control border border-success"
+                      placeholder="Name" />
+                  </div>
+
+
+                  <!-- 3rd -->
+                  <div class="form-outline  mb-4">
+      <small *ngIf="registerForm.controls['email'].dirty  && registerForm.hasError('required','email')" class="text-danger">*Email is required</small>
+
+                   
+                    <input formControlName="email" type="email" id="form2Example11" class="form-control border border-success"
+                      placeholder="Enter Your Email" />
+                  </div>
+                  
+
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <button (click)="OnSubmit()"  class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Register
+                      </button>
+                    
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
