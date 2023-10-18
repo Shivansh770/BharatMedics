@@ -1,1 +1,31 @@
-<p>dashboard works!</p>
+<div class="outer">
+    <div class="container-fluid ms-0 py-4 text-end pe-4 ">
+     
+     <h3> Welcome Back , {{fullName}}</h3>
+    
+    </div>
+
+    <table class="table table-striped p-3">
+        <thead>
+          <h3 class="text-center">User Lists</h3>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of user | paginate: { itemsPerPage: 8, currentPage: p }">
+            <td>{{ p.name }}</td>
+            <td>{{ p.username }}</td>
+            <td>{{ p.email }}</td>
+            <td>{{ p.role }}</td>
+          </tr>
+        </tbody>
+    </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  
+ </div>
+
+

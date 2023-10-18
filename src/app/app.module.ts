@@ -9,6 +9,14 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { HeaderComponent } from './Components/header/header.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import { CartsComponent } from './Components/DoctorContent/carts/carts.component';
+import { DashboardDoctorComponent } from './Components/DoctorContent/dashboard-doctor/dashboard-doctor.component';
+import { UserOrdersComponent } from './Components/DoctorContent/user-orders/user-orders.component';
+import { DrugsComponent } from './Components/drugs/drugs.component';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +24,12 @@ import { TestBed } from '@angular/core/testing';
     LoginComponent,
     SignupComponent,
     DashboardComponent,
+    HeaderComponent,
+    FooterComponent,
+    CartsComponent,
+    DashboardDoctorComponent,
+    UserOrdersComponent,
+    DrugsComponent,
    
   ],
   imports: [
@@ -24,9 +38,12 @@ import { TestBed } from '@angular/core/testing';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    HttpClientTestingModule
+    HttpClientTestingModule,
+    NgxPaginationModule
   ],
-  providers: [],
+  providers: [
+  
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -25,8 +25,22 @@ export class AuthService {
   }
 
   Login(LoginObj : object){
-    return this.http.post<any>(`${this.baseUrl}Login`,LoginObj);
+    return this.http.post<any>(this.baseUrl+LoginObj,LoginObj);
   }
+
+  Logout(){
+    localStorage.clear();
+    this.toast.success({detail:"Success", summary : "You have been Logout" , duration:3500});
+    this.route.navigate(['login'])
+    
+    }
+
+    isLogged():boolean{
+  
+
+      return !! localStorage.getItem('token')
+    }
+  
 
   decodedToken(){
     const jwtHelper = new JwtHelperService();
@@ -36,13 +50,25 @@ export class AuthService {
     return jwtHelper.decodeToken(nex);
  }
 
- getToken() {
-  
-
-  return localStorage.getItem('token')
+ getFullNameFromToken(){
+  if(this.userPayload)
+  return this.userPayload.unique_name;
+}
+getRoleFromToken(){
+  if(this.userPayload){
+    return this.userPayload.role;
+  }
 }
 
+ getToken() {
+  
+  return localStorage.getItem('token')
+  }
 
+  storeToken (tokenValue: string){
+    localStorage.setItem('token',tokenValue);
+
+  }
   jwtHelperService = new JwtHelperService();
 
   
